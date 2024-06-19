@@ -1,0 +1,499 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #dadada;
+    position: relative;
+}
+
+#cursor{
+    height: 2vw;
+    width: 2vw;
+    background-color: #FF6969;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1009;
+    transform: translate(-50%, -50%);
+}
+
+
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content{
+   height: 100%;
+    width: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3vw 3vw;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    position: relative;
+}
+
+.nav-links h11{
+    font-size: 1.6vw;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 40px;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
+}
+
+h11::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    overflow: hidden;
+ }  
+ 
+ h11:hover::after{
+     bottom: 0;
+     border-radius: 0%;
+ }
+ 
+ h11:hover a,
+ h11 a:hover {
+   color: black; /* Ensure the color remains white on hover */
+   text-decoration: none; /* Ensure no underline on hover */
+ }
+ 
+ h11 a{
+     text-decoration: none;
+     color: black;
+     z-index: 10;
+     position: relative;
+ }
+
+nav h3,h4{
+    font-size: 1.6vw;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#page1-content h1{
+    font-size: 25vw;
+    font-weight: 100;
+    line-height: 27vw ;
+    display: flex;
+    transition:  0.3s;
+}
+
+
+
+
+.letter {
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation: moveUp 0.5s forwards;
+    z-index: 4;
+    /* background: url('./assets/text.jpg') no-repeat center center;
+    -webkit-background-clip: text; /* Clip background to text 
+    background-size: cover;
+    transition: color 0.5s ease-in-out; */
+}
+
+/* .letter:hover{
+    color: transparent;
+} */
+
+
+#page2-content{
+    width: 100%;
+    background-color: beige;
+    height: 100vh;
+}
+
+.page-right{
+    display: flex;
+    align-items: first baseline;
+    justify-items: space-between;
+}
+
+.heading-container h2,.heading-container2 h2{
+  font-size:8vw;
+  font-weight: 400;
+  font-family: 'Bebas neue', sans-serif;
+  color: #000;
+  padding-left: 2vw;
+}
+
+.heading-container,.heading-container2{
+  width: fit-content;
+  overflow: hidden;
+}
+
+
+.custom-heading,.custom-heading2{
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+
+
+.time-container{
+  width: fit-content;
+  overflow: hidden;
+}
+
+.time{
+    font-size: 2.5vw;
+    font-family: 'Bebas neue', sans-serif;
+    color: #000;
+    padding: 2vw;
+    margin-left: 570px;
+    transform: translateY(100%);
+}
+
+.page-left p{
+    font-size: 2.5vw;
+    font-family: 'Bebas neue', sans-serif;
+    color: #000;
+    padding: 2vw;
+
+}
+
+
+.hr,.hr2{
+    position: absolute;
+    margin-top: -30px;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    margin-left: 30px;
+    transition: width 0.3s ease; 
+}
+
+
+.paragraph-container{
+  width: fit-content;
+  overflow: hidden;
+}
+
+.paragraph{
+  transform: translateY(100%);
+}
+
+
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    margin-top: 1rem;
+    overflow: hidden;
+
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+  
+  .item {
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+  }
+  
+  .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+  
+  .item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+  
+  .item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+  
+  .item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  }
+  
+  .item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  }
+  
+  .item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  }
+  
+  .item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  }
+  
+  .item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  }
+
+  .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6vw;
+  }
+
+  #page3-content{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding-top: 100px;
+    padding-left: 120px;
+  }
+
+  .elem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1vw 0vw;
+    padding-right: 0;
+    border-top: 1px solid #888;
+}
+
+.elem h8{
+    font-size: 7vw;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+}
+
+.elem h9 {
+    text-transform: uppercase;
+    font-size: 2.6vw;
+    opacity: .7;
+    color: #fff;
+}
+
+.elemlast {
+    border-bottom: 1px solid #888;
+}
+
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#page4{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+}
+
+#swiperdiv{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    padding-top: 10px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.swiper {
+    width: 130%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width:19%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swipper-wrapper{
+    transition: transform 0.5s ease;
+  }
+
+  #page5 {
+    width: 100%;
+    height: 70vh;
+    background-color: #000;
+    position: relative;
+}
+
+#page5-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 100px;
+}
+
+
+
+.footer {
+    text-align: center; /* Center the content inside .footer */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+}
+
+.footer ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.footer ul li {
+    display: inline-block; /* Display items horizontally */
+    margin: 0 10px; /* Adjust margin between items */
+    font-size: 5vw; /* Adjust font size relative to viewport width */
+}
+
+.footer ul li a {
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-container{
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+}
+.footer-end{
+  font-size: 15vw;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #555;
+  line-height: 27vw ;
+  display: flex;
+  transform: translateY(-100%);
+}
+
+.footer-container{
+  overflow: hidden;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav-links{
+      display: none;
+  }
+
+  h4{
+      display: none;
+  }
+
+  .menu {
+      display: block;
+
+  }
+
+  .hr{
+    margin-top: 5px;
+    margin-left: 18px;
+  }
+
+  #page2{
+    height: 60vh;
+  }
+
+  #page3{
+    height: 60vh;
+  }
+
+  #page4{
+    height: 80vh;
+  }
+
+  .hr2{
+    margin-top: 5px;
+    margin-left: 18px;
+  }
+
+  #page5{
+    height: 60vh;
+  }
+
+}
