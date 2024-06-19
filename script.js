@@ -61,7 +61,6 @@ function page2Animation() {
           start: 'top 75%',
           end: 'top 45%',
           toggleActions: 'play none none reset',
-          markers: true, // Optional: For debugging, shows trigger area
       }
   });
 
@@ -77,7 +76,6 @@ function page2Animation() {
         start: 'top 75%',
         end: 'top 45%',
         toggleActions: 'play none none reset',
-        markers: true, // Optional: For debugging, shows trigger area
     }
 });
 gsap.to('.paragraph', {
@@ -92,7 +90,6 @@ gsap.to('.paragraph', {
       start: 'top 75%',
       end: 'top 45%',
       toggleActions: 'play none none reset',
-      markers: true, // Optional: For debugging, shows trigger area
   }
 });
 gsap.to('.hr', {
@@ -107,7 +104,6 @@ gsap.to('.hr', {
       start: 'top 75%',
       end: 'top 45%',
       toggleActions: 'play none none reset',
-      markers: true, // Optional: For debugging, shows trigger area
   }
 });
 }
@@ -127,7 +123,6 @@ function page4Animation() {
         start: 'top 75%',
         end: 'top 45%',
         toggleActions: 'play none none reset',
-        markers: true, // Optional: For debugging, shows trigger area
     }
 });
 
@@ -143,7 +138,6 @@ gsap.to('.hr2', {
       start: 'top 75%',
       end: 'top 45%',
       toggleActions: 'play none none reset',
-      markers: true, // Optional: For debugging, shows trigger area
   }
 });
 
@@ -164,7 +158,6 @@ function page5Animation() {
           start: 'top 65%',
           end: 'top 7%',
           toggleActions: 'play none none reset',
-          markers: true, // Optional: For debugging, shows trigger area
       }
   });
 }
